@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #fff;
+}
+body::before{
+    content: '';
+    background-image: url('https://code-step.com/demo/html/gallery/img/bg.jpg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    opacity: 1;
+    /* transition: opacity .5s ease-in-out; */
+}
+.bg-black{
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+.header.scroll{
+    opacity: 1;
+}
+.h-logo{
+    margin: 30px;
+}
+.hamburger-menu{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 30px;
+}
+.hamburger{
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+}
+.hamburger::after{
+    content: '';
+    position: absolute;
+    top: 38%;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+}
+.hamburger::before{
+    content: '';
+    position: absolute;
+    top: 80%;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+}
+.main{
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.flowerImg{
+    object-fit: cover;
+    object-position: top;
+}
+
+h1{
+    text-align: center;
+    font-size: 5rem;
+    padding: 100px 0;
+    font-weight: normal;
+
+}
+.contents{
+    max-width: calc(100% - 35vw);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.contents-header,
+.contents-body{
+    text-align: center;
+}
+span{
+    font-weight: normal;
+    padding: 10px 0;
+    font-size: 3rem;
+    border-bottom: 1px solid #fff;
+}
+.contents-body{
+    padding: 50px 0;
+}
+.contents-body h4{
+    padding: 20px 0;
+    font-size: 1.5rem;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.contents-list{
+    list-style: none;
+}
+.garrely-img{
+    width: 30vw;
+    vertical-align: bottom;
+    padding-bottom: 30px;
+}
+.contents-item .contents-list:nth-child(odd){
+    text-align: left;
+}
+.contents-item .contents-list:nth-child(even){
+    text-align: right;
+}
+
+/* .bg-image{
+    background-image: url('https://code-step.com/demo/html/gallery/img/bg.jpg');
+    position: relative;
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+} */
+/* .bg-image.showClass{
+    opacity: 1;
+} */
+.p-5{
+    padding: 20px 0;
+}
+.section-space{
+    padding: 250px 0 100px;
+}
+button{
+    border: 1px solid #fff;
+    padding: 20px 80px;
+    background-color: transparent;
+    color: #fff;
+}
+.contact-btn{
+    border: 1px solid #fff;
+    padding: 30px;
+    width: 30vw;
+    margin: 20px auto;
+    position: relative;
+    transition: opacity .5s ease-in-out;
+}
+.contact-btn::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10%;
+    border-bottom: 1px solid #ffff;
+    width: 10vw;
+    height: 2vh;
+    transition: right .5s ease-in-out;
+}
+.contact-btn::after{
+    content: '';
+    position: absolute;
+    top: 46%;
+    right: -10%;
+    border-bottom: 1px solid #ffff;
+    width: 1vw;
+    height:2vh;
+    transform: rotate(30deg)translateY(-50%);
+    transition: right .5s ease-in-out
+}
+.contact-btn:hover{
+    opacity: 0.6;
+}
+.contact-btn:hover::after,
+.contact-btn:hover::before{
+    right: -15%;
+}
+.footer{
+    border-top: 1px solid #fff;
+    padding: 80px 30px 30px;
+}
+.f-company{
+    text-align: left;
+}
+.f-link{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.f-company p{
+    font-size: 0.7rem;
+}
+.link{
+    color: #fff;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
